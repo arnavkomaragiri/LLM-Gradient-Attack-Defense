@@ -1,6 +1,7 @@
 # Project Description #
 ## Team Info: ##
 **Team Name:** Team ACK
+
 **Team Members:**
 - Arnav Chandra Komaragiri
 	- Major: Computer Science
