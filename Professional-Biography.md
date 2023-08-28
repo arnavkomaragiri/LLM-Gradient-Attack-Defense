@@ -23,6 +23,9 @@ I'm highly passionate about Machine Learning and Deep Learning, specifically wit
 - Deployed models for sub-second inference (~80ms) using Flask webserver and Docker containers
 ## Contact Info
 **Email:** komaraac@mail.uc.edu
+
 **LinkedIn:** https://www.linkedin.com/in/arnavkomaragiri/
+
 **Discord:** @useewhynot
+
 **Phone Number:** 513-846-0956
