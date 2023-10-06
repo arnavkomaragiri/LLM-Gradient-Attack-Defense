@@ -1,3 +1,4 @@
 transformers==4.28.1
+datasets
 ml_collections
 fschat==0.2.20
