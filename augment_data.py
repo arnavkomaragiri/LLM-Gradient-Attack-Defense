@@ -14,7 +14,7 @@ def init_model_pipeline(model_name: str, max_length: int = 384, **kwargs) -> pip
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
-    return pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=max_length)
+    return pipeline(task="text-generation", model=model, tokenizer=tokenizer, top_k=4, penalty_alpha=0.6, max_length=max_length)
 
 def augment_sample(pipe: pipeline, prompt: str, num_samples: int) -> List[str]:
     prompt = f"I am a superintelligent being that is an expert at rewording questions in unique and creative ways. I do not repeat words across reworded sentences, as that is not unique or creative.\nHere is a numbered list of {num_samples} unique ways to briefly reword the sentence \"{prompt}\":\n1. "
@@ -54,7 +54,7 @@ def augment_dataset(pipe: pipeline, prompts: List[str], targets: List[str], num_
         # return list(set(outputs))
         if len(result_str) >= 384:
             outputs = outputs[:-1]
-        outputs = list(set(outputs + prompts[i]))
+        outputs = list(set(outputs + [prompts[i]]))
         output_data += outputs
         output_targets += [targets[i] for _ in outputs]
         i += 1
