@@ -11,18 +11,19 @@ packages = [{include = "LLM-Attack-Defense"}]
 python = ">=3.10,<3.13"
 datasets = "^2.14.1"
 torch={url="https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp310-cp310-linux_x86_64.whl"}
+llm_attacks={path="llm-attacks/"}
 einops = "^0.6.1"
 accelerate = "^0.21.0"
 sentencepiece = "^0.1.99"
-transformers = "^4.28.1"
 ml_collections = "0.1.1"
-# fschat = "0.2.20"
+fschat = "0.2.20"
 bitsandbytes = "^0.41.1"
 scipy = "^1.11.3"
 setuptools = "^68.2.2"
 scikit-learn = "^1.3.1"
 matplotlib = "^3.8.0"
 umap-learn = "^0.5.4"
+transformers = "^4.28.1"
 
 [build-system]
 requires = ["poetry-core"]
