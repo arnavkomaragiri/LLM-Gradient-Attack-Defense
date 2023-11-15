@@ -1,3 +1,6 @@
 [submodule "llm-attacks"]
 	path = llm-attacks
 	url = https://github.com/llm-attacks/llm-attacks
+[submodule "JailbreakingLLMs"]
+	path = JailbreakingLLMs
+	url = https://github.com/arnavkomaragiri/JailbreakingLLMs
